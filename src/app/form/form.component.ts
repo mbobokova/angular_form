@@ -22,13 +22,13 @@ export class FormComponent {
   }
 
   ngOnInit() {
-    // Naèítanie dát z localStorage pri inicializácii
+    // Load data from localStorage on init
     const savedData = localStorage.getItem('formData');
     if (savedData) {
       this.form.patchValue(JSON.parse(savedData));
     }
 
-    // Aktualizácia localStorage pri zmene hodnoty formulára
+    // Refresh localStorage if values change
     this.form.valueChanges.subscribe(value => {
       localStorage.setItem('formData', JSON.stringify(value));
     });

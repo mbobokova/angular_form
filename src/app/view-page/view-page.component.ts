@@ -13,6 +13,7 @@ import { RouterLink  } from '@angular/router';
 export class ViewPageComponent {
   formData: any;
 
+  // Get data from browser storage
   ngOnInit() {
     const data = localStorage.getItem('formData');
     if (data) {
