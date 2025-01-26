@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="send()">
+    <div>
+      <label for="name">Name:</label>
+      <input id="name" type="text" formControlName="name">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input id="email" type="email" formControlName="email">
+    </div>
+    <div>
+      <label for="telNumber">Telephone:</label>
+      <input id="telNumber" type="number" formControlName="telNumber">
+    </div>
+    <button type="submit" [disabled]="!form.valid">Send</button>
+  </form>
